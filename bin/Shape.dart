@@ -18,6 +18,7 @@ class Circle implements Shape {
   num get area => pi * pow(radius, 2);
 }
 
+/* Toda classe em Dart define uma interface */
 class CircleMock implements Circle {
   @override
   num radius;
