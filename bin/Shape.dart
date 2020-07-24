@@ -4,6 +4,7 @@ abstract class Shape {
   factory Shape(String type) {
     if (type == 'circle') return Circle(2);
     if (type == 'square') return Square(2);
+    if (type == 'circleMock') return CircleMock();
     throw "Cant't create $type";
   }
   num get area;
@@ -15,6 +16,13 @@ class Circle implements Shape {
 
   @override
   num get area => pi * pow(radius, 2);
+}
+
+class CircleMock implements Circle {
+  @override
+  num radius;
+  @override
+  num area;
 }
 
 class Square implements Shape {
